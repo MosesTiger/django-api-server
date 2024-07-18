@@ -21,3 +21,4 @@ urlpatterns = [
     path('polls/', include('polls.urls')),  
     path('admin/', admin.site.urls),
 ]
+#안녕하세요. 이것은 polls 앱의 URL 설정입니다.s
