@@ -12,7 +12,7 @@ from django.db import models
 
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
+    pub_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f'제목:{self.question_text}, 날짜: {self.pub_date}'
@@ -25,3 +25,4 @@ class Choice(models.Model):
     def __str__(self):
         return f'{self.choice_text}'
 
+# choice에서는 question으로 바로 접근 가능, 하지만 반대는 불가
